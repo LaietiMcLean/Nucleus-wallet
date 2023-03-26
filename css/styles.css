@@ -37,10 +37,19 @@ img {
     display: block;
 }
 
+.mask {
+    overflow: hidden;
+}
+
 [class$="__container"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
+}
+
+[class$="__heading"] {
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
 /*Header*/
@@ -102,7 +111,6 @@ img {
 }
 
 .header__heading {
-    text-align: center;
     font-size: 3rem;
 }
 
@@ -170,7 +178,6 @@ img {
 }
 
 .nucleus__heading {
-    text-align: center;
     margin-bottom: 5rem;
 }
 
@@ -196,6 +203,7 @@ img {
 
 .list__element {
     box-shadow: 0px 0px 15px 3px rgb(0 0 0 / .15);
+    background-color: var(--white);
     padding: 2rem;
     margin-bottom: 5rem;
     transition-property: transform;
@@ -216,3 +224,34 @@ img {
     margin: 0;
     font-size: 2rem;
 }
+
+/*Security*/
+.security {
+    background-color: var(--main);
+    padding: 10rem 0;
+    transform: rotate(3deg) scale(1.5);
+    margin: 50rem 0;
+}
+
+@media (min-width: 768px) {
+    .security {
+        margin: 30rem 0;
+    }
+} 
+
+.security__container {
+    transform: rotate(-3deg) scale(.75);
+}
+
+.security__heading {
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .security__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+} 
