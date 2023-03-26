@@ -210,10 +210,36 @@ img {
     transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+    .list__element--2col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem
+    }
+}
+
 .list__heading {
     font-size: 3rem;
     color: var(--main);
     margin: 0
+}
+
+.list__number {
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 900;
+    color: var(--main);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .list__number {
+        flex-basis: 20rem;
+        text-align: right;
+        font-size: 4rem;
+    }
+    
 }
 
 .list__text {
@@ -247,8 +273,8 @@ img {
 
 .security::after {
     bottom: -10rem;
-    left: 0;
-    transform: rotate(-3deg);
+    left: -5rem;
+    transform: rotate(3deg);
 }
 
 .security__heading {
@@ -263,3 +289,31 @@ img {
         align-items: center;
     }
 } 
+
+/*Taxes*/
+@media (min-width: 768px) {
+      .taxes__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: flex-end;
+      }
+}
+
+@media (min-width: 998px) {
+    .taxes__grid {
+        align-items: center;
+      }
+}
+
+.taxes__text {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .taxes__text {
+        text-align: left;
+    }
+}
